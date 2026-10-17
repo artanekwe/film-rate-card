@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Film Marketing Design Rate Card | Art Anekwe</title>
+<meta name="description" content="Film artwork and marketing design packages for filmmakers, from indie projects to major studio productions. By Art Anekwe, Creative Director.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --card:#111111; --card2:#1a1a1a;
+  --line:#2a2a2a; --text:#f5f5f5; --muted:#9a9a9a;
+  --teal:#2dd4bf; --teal-deep:#14b8a6;
+  --wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+/* Hero */
+.hero{padding:clamp(80px,14vw,160px) 0 clamp(48px,8vw,96px)}
+h1{
+  font-weight:800;letter-spacing:-.045em;line-height:.92;
+  font-size:clamp(3rem,10.5vw,8.5rem);text-transform:uppercase;
+}
+.sub{
+  margin-top:clamp(24px,4vw,40px);max-width:22ch;
+  font-size:clamp(1.4rem,3.2vw,2.4rem);font-weight:500;
+  letter-spacing:-.02em;line-height:1.15;color:var(--teal);
+}
+.intro{
+  margin-top:clamp(48px,7vw,88px);display:grid;gap:32px;
+  grid-template-columns:1fr;align-items:center;
+}
+.avatar{
+  width:132px;height:132px;border-radius:50%;object-fit:cover;
+  background:var(--card2);border:2px solid var(--teal);
+  box-shadow:0 0 32px rgba(45,212,191,.25);
+}
+.intro p{max-width:62ch;color:#cfcfcf;font-size:1.0625rem}
+.intro strong{color:var(--text);font-weight:600}
+@media(min-width:760px){.intro{grid-template-columns:auto 1fr;gap:48px}.avatar{width:168px;height:168px}}
+
+/* Section heads */
+section{padding:clamp(48px,8vw,96px) 0}
+h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.lede{margin-top:16px;color:var(--muted);max-width:52ch}
+
+/* Cards */
+.card{
+  position:relative;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,var(--card2),var(--card) 55%);
+  border:1px solid var(--line);border-radius:16px;padding:32px;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.card:hover{
+  transform:translateY(-6px);border-color:var(--teal);
+  box-shadow:0 0 0 1px var(--teal),0 12px 48px rgba(45,212,191,.18);
+}
+.card h3{font-size:1.6rem;font-weight:600;letter-spacing:-.02em}
+.desc{margin-top:8px;color:var(--muted);font-size:.95rem;min-height:3em}
+.price{margin:28px 0;font-size:3rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.price.quote{font-size:1.75rem;letter-spacing:-.02em;line-height:1.7}
+.card hr{border:0;border-top:1px solid var(--line);margin-bottom:24px}
+.card ul{list-style:none;display:grid;gap:14px;align-content:start;margin-bottom:32px;flex:1}
+.card li{
+  position:relative;padding-left:34px;color:#d6d6d6;font-size:.95rem;line-height:1.5;
+}
+.card li::before{
+  content:"";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--teal-deep);
+  background:#0a0a0a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232dd4bf' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat;
+}
+.card li small{display:block;color:var(--muted);font-size:.85rem}
+
+/* Premium highlight */
+.card.featured{
+  border-color:var(--teal);
+  background:
+    radial-gradient(120% 40% at 50% 0%,rgba(45,212,191,.28),transparent 70%),
+    linear-gradient(180deg,#0b3a34,#07201d 70%);
+  box-shadow:0 0 0 1px rgba(45,212,191,.5),0 0 60px rgba(45,212,191,.22);
+}
+.card.featured:hover{box-shadow:0 0 0 1px var(--teal),0 0 90px rgba(45,212,191,.4)}
+.tag{
+  position:absolute;top:28px;right:28px;
+  border:1px solid var(--teal);background:rgba(20,184,166,.15);color:var(--teal);
+  border-radius:999px;padding:3px 14px;font-size:.75rem;font-weight:600;
+}
+
+/* Buttons */
+.btn{
+  display:block;text-align:center;text-decoration:none;font-weight:600;
+  padding:16px 24px;border-radius:999px;background:#333;color:var(--text);
+  transition:background .25s,color .25s,transform .25s,box-shadow .25s;
+}
+.btn:hover{background:var(--teal);color:#04100e;transform:translateY(-2px)}
+.featured .btn{background:var(--teal);color:#04100e}
+.featured .btn:hover{background:#5eead4;box-shadow:0 0 28px rgba(45,212,191,.55)}
+
+/* Layouts */
+.artwork{display:grid;gap:32px;grid-template-columns:1fr}
+.artwork .card{padding:36px}
+.artwork .card ul{margin-bottom:32px}
+.grid{display:grid;gap:24px;grid-template-columns:1fr;margin-top:48px;align-items:stretch}
+@media(min-width:900px){
+  .artwork{grid-template-columns:1fr 1fr;align-items:center;gap:64px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+.note{margin-top:40px;color:var(--muted);font-size:.9rem;max-width:62ch}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.9rem}
+
+/* Scroll reveal: only hides content when JS is running */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Film Marketing Design Rate Card.</h1>
+    <p class="sub">Amplify your vision with a strategic mix of creative design and targeted marketing.</p>
+
+    <div class="intro reveal">
+      <img class="avatar" src="assets/art-anekwe.png" alt="Portrait of Art Anekwe"
+           onerror="this.onerror=null;this.src='https://www.dropbox.com/scl/fi/80zrvbexzh4er30ny2i46/Untitled-design.png?rlkey=q4v67pi0fi7iox83qzottkij5&amp;st=7zry03pa&amp;raw=1'">
+      <p>Hello, I'm <strong>Art Anekwe, Creative Director.</strong> My packages and services are tailored to help filmmakers, from small indie projects to major studio productions. Choose from my three-tiered packages, or select specific items to create a custom solution that meets your needs and budget. I look forward to helping bring your film's vision to life.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="artwork">
+    <div class="wrap artwork">
+      <div class="reveal">
+        <h2>Film Artwork</h2>
+        <p class="lede">A standalone service: the key art that sells your film's story.</p>
+      </div>
+      <article class="card reveal">
+        <h3>Film Artwork</h3>
+        <p class="desc">Creation of the key art that sells your film's story.</p>
+        <div class="price">₦300k</div>
+        <hr>
+        <ul>
+          <li>2 distinct design concepts</li>
+          <li>Up to 3 rounds of revisions on the selected concept</li>
+          <li>Custom illustration</li>
+          <li>Professional photo retouching</li>
+        </ul>
+        <a class="btn" href="https://wa.me/2348032538758?text=Hi%20Art%2C%20I%27m%20interested%20in%20the%20Film%20Artwork%20service%20%28%E2%82%A6300k%29.%20Let%27s%20discuss." target="_blank" rel="noopener">Get Film Artwork</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="wrap">
+      <div class="reveal">
+        <h2>Choose your package</h2>
+        <p class="lede">Three tiers, built for every stage of a film's release.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <h3>Basic</h3>
+          <p class="desc">Ideal for indie projects needing essential assets.</p>
+          <div class="price">₦500k</div>
+          <hr>
+          <ul>
+            <li>Film key art / main poster design <small>2 versions</small></li>
+            <li>Key cast reveal art <small>Up to 5 designs</small></li>
+            <li>Social media graphics <small>3 post designs</small></li>
+            <li>Website graphics <small>1 homepage or thumbnail banner, fit for YouTube, Netflix and Amazon Prime</small></li>
+            <li>Press kit <small>Film synopsis, credits, cast bios and more, up to 10 pages</small></li>
+          </ul>
+          <a class="btn" href="https://wa.me/2348032538758?text=Hi%20Art%2C%20I%27m%20interested%20in%20the%20Basic%20package%20%28%E2%82%A6500k%29.%20Let%27s%20discuss." target="_blank" rel="noopener">Get Basic Package</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Standard</h3>
+          <p class="desc">Complete festival and release ready package.</p>
+          <div class="price">₦1m</div>
+          <hr>
+          <ul>
+            <li>Print materials <small>Key art / main poster (3 versions), flyers, brochures, banners</small></li>
+            <li>Social media graphics <small>Profile banner, 6 posts or templates, story designs</small></li>
+            <li>Website graphics <small>Homepage banner + 3 supporting visuals</small></li>
+            <li>Motion graphics <small>Simple logo animation for intros and outros</small></li>
+            <li>Press and media kit <small>Director's statement, synopsis, credits, cast bios, hi-res stills and BTS</small></li>
+            <li>Event and premiere materials <small>Invitation cards</small></li>
+          </ul>
+          <a class="btn" href="https://wa.me/2348032538758?text=Hi%20Art%2C%20I%27m%20interested%20in%20the%20Standard%20package%20%28%E2%82%A61m%29.%20Let%27s%20discuss." target="_blank" rel="noopener">Get Standard Package</a>
+        </article>
+
+        <article class="card featured reveal">
+          <span class="tag">Best Value</span>
+          <h3>Premium</h3>
+          <p class="desc">The ultimate campaign suite for major studio productions.</p>
+          <div class="price quote">Contact for quote</div>
+          <hr>
+          <ul>
+            <li>Key art / main poster <small>Multiple versions: teaser, official, character posters</small></li>
+            <li>Flyers and brochures</li>
+            <li>Banners <small>Vertical, horizontal, oversized billboards</small></li>
+            <li>Standees</li>
+            <li>Digital marketing assets <small>Complete campaign, full suite of website visuals, animated teasers and logo animation</small></li>
+            <li>Enhanced press kit</li>
+            <li>Event and premiere materials <small>Red carpet backdrops, tickets and programs</small></li>
+            <li>Merchandise and promotional items <small>Branded apparel, specialty items</small></li>
+            <li>Interactive and engagement tools <small>AR/VR content, Instagram AR filters</small></li>
+          </ul>
+          <a class="btn" href="https://wa.me/2348032538758?text=Hi%20Art%2C%20I%27m%20interested%20in%20the%20Premium%20package.%20Let%27s%20discuss." target="_blank" rel="noopener">Get Premium Package</a>
+        </article>
+      </div>
+
+      <p class="note reveal">*Note that this includes only designs. For printing or other production services kindly request a quote.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> Art Anekwe Creative Director.</div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('y').textContent = new Date().getFullYear();
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
